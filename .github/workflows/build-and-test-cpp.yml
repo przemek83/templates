@@ -8,7 +8,6 @@ on:
         description: platform
         type: string
 
-
 env:
   BUILD_TYPE: Release
 
