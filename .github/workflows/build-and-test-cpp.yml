@@ -13,6 +13,7 @@ env:
 
 jobs:
   build:
+    name: Build & test
     runs-on: ${{inputs.platform}}
 
     steps:
