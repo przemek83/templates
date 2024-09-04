@@ -2,10 +2,8 @@ SET(PROJECT_TEST ${PROJECT_NAME}-test )
 
 include_directories(${CMAKE_SOURCE_DIR})
 
-file(COPY TestFiles DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-
 set(${PROJECT_TEST}_SOURCES
-    <TODO: file>
+    <TODO: file(s)>
 )
 
 add_executable(${PROJECT_TEST} ${${PROJECT_TEST}_SOURCES})
