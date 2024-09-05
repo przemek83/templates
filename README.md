@@ -1,3 +1,11 @@
+- [Overview](#overview)
+- [Workflows](#workflows)
+   * [Build & test](#build-test)
+   * [Analysis and coverage](#analysis-and-coverage)
+- [CMake](#cmake)
+- [.gitignore](#gitignore)
+- [.clang-format](#clang-format)
+
 # Overview
 This repository contains reusable files including:
 - `GitHub Actions workflows` that can be shared across multiple repositories.
