@@ -8,7 +8,7 @@ on:
         description: 'Platform to use for building'
         type: string
       dependencies-linux:
-        description: 'List of dependencies to install'
+        description: 'List of dependencies to install on Linux'
         required: false
         type: string
 
