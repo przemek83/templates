@@ -47,7 +47,7 @@ Make sure that appropriate secrets:
 
 Are present in secrets section on GitHub. Also copy `sonar-project.properties` to your project and fill project key and project name. Check my other project like data-explorer or penna-model for usage examples.
 
-## CMake
+# CMake
 CMake templates for use in C++ projects and libraries. Expected structure of C++ project is one containing sources in the `src` directory and tests in `test` directory. Expected structure for C++ library is one containing sources in `src` directory, tests in `test` directory, public headers in `include/<library name>` and use examples in `examples`. Also, present are files supporting use of `GTest` and `Catch2` testing frameworks.
 
 For standard C++ projects, use:
@@ -63,8 +63,8 @@ For C++ library projects, use:
 
 Check out my other projects like `data-explorer`, `penna-model` or `cpputils` for usage examples.
 
-## .gitignore
+# .gitignore
 Adjusted version of stock GitHub one for C++ projects. Added some entries related to Python and VSC use.
 
-## .clang-format
+# .clang-format
 Format file for `clang-format` tool. To be used with C++ projects enforcing coherent formatting along codebase. Just copy it to your project and setup IDE to use it.
