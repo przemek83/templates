@@ -5,6 +5,7 @@
 - [CMake](#cmake)
 - [.gitignore](#gitignore)
 - [.clang-format](#clang-format)
+- [Licensing](#licensing)
 
 # Overview
 This repository contains reusable files including:
@@ -76,3 +77,6 @@ Adjusted version of stock GitHub one for C++ projects. Added some entries relate
 
 # .clang-format
 Format file for `clang-format` tool. To be used with C++ projects enforcing coherent formatting along codebase. Just copy it to your project and setup IDE to use it.
+
+# Licensing
+Software is released under the MIT license.
