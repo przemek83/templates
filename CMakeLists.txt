@@ -34,5 +34,5 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 target_link_libraries(${PROJECT_NAME} ${PROJECT_NAME}-lib)
 
 enable_testing()
-Include(Tests.cmake)
+include(Tests.cmake)
 add_subdirectory(test)
