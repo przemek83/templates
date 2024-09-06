@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.14)
 
 project(<TODO: name>
-        LANGUAGES CXX
-        VERSION 1.0.0
-        DESCRIPTION "TODO: description"
-        HOMEPAGE_URL "https://github.com/przemek83/<TODO: name>")
+    LANGUAGES CXX
+    VERSION 1.0.0
+    DESCRIPTION "TODO: description"
+    HOMEPAGE_URL "https://github.com/przemek83/<TODO: name>")
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
