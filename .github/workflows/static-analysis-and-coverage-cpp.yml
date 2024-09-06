@@ -2,7 +2,11 @@ name: Static analysis and coverage
 
 on:
   workflow_call:
-
+    inputs:
+      dependencies:
+        description: 'List of dependencies to install'
+        required: false
+        type: string
 env:
   BUILD_TYPE: Release
   BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory
@@ -18,7 +22,7 @@ jobs:
           fetch-depth: 0 
 
       - name: Install Dependencies
-        run: sudo apt install gcovr
+        run: sudo apt-get install -y gcovr ${{ inputs.dependencies }}
 
       - name: Configure CMake
         run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCODE_COVERAGE=ON
