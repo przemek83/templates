@@ -42,12 +42,12 @@ jobs:
         if: ${{ inputs.dependencies-linux }}
         run: sudo apt-get install -y ${{ inputs.dependencies-linux }}
 
-      - name: Install Qt Linux
+      - name: Install Qt
         if: ${{ inputs.use-qt }}
         uses: jurplel/install-qt-action@v4
         with:
           version: ${{ inputs.qt-version }}
-          host: ${{ inputs.qt-host }}
+          # host: ${{ inputs.qt-host }}
 
       - name: Configure CMake
         run: cmake -B ${{ github.workspace }}/build -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
