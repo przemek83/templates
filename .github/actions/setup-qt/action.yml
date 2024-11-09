@@ -1,5 +1,12 @@
 name: Setup Qt
 description: Install Qt on machine
+inputs:
+  host:
+    description: 'Host operating system'
+    required: false
+    type: string
+    default: linux
+
 runs:
   using: composite
   steps:
@@ -7,4 +14,5 @@ runs:
       uses: jurplel/install-qt-action@v4
       with:
         version:      6.5.*
+        host:         ${{ inputs.host }}
    
