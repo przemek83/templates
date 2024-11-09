@@ -21,11 +21,6 @@ on:
         required: false
         type: string
         default: 6.5.*
-      qt-host:
-        description: 'Qt host type'
-        required: false
-        type: string
-        default: linux
 
 env:
   BUILD_TYPE: Release
@@ -47,7 +42,10 @@ jobs:
         uses: jurplel/install-qt-action@v4
         with:
           version: ${{ inputs.qt-version }}
-          # host: ${{ inputs.qt-host }}
+
+      - name: Install Qt using action
+        if: ${{ inputs.use-qt }}
+        uses: ./.github/actions/setup-qt
 
       - name: Configure CMake
         run: cmake -B ${{ github.workspace }}/build -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
