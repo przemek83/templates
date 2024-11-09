@@ -7,7 +7,6 @@ runs:
       uses: jurplel/install-qt-action@v4
       with:
         version:      6.5.*
-        host:         linux
         target:       desktop
         setup-python: false
    
