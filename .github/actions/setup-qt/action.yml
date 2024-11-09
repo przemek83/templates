@@ -9,6 +9,5 @@ runs:
         version:      6.5.*
         host:         linux
         target:       desktop
-        arch:         gcc_64
         setup-python: false
    
