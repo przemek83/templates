@@ -58,13 +58,44 @@ Make sure that appropriate secrets:
 - SONAR_TOKEN - token for SonarCloud
  analysis and coverage reporting.
 
-Are present in secrets section on GitHub. Also copy `sonar-project.properties` to your project and fill project key and project name. Check my other project like data-explorer or penna-model for usage examples.
+Are present in secrets section on GitHub. Also copy `sonar-project.properties` to your project and fill project key and project name. Check my other project like `data-explorer` or `penna-model` for usage examples.
 
 # Pylint
-TODO
+Static analysis reusable workflow for Python projects using Pylint. To call reusable workflow place following content in your workflow file:
+```
+name: Pylint
+
+on: [push, pull_request]
+
+jobs:
+  analyze:
+    uses: przemek83/common/.github/workflows/pylint.yml@main
+```
+
+Check `penna-model` project for example use.
 
 # CodeQL
-TODO
+Workflow for CodeQL analysis in case default version does not work correctly. Dedicated for C++ projects using Qt framework.
+
+```
+name: "CodeQL analysis"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '29 2 * * 0'
+
+jobs:
+  analyze:
+    uses: przemek83/common/.github/workflows/codeql-cpp.yml@main
+    with:
+      use-qt: true
+      qt-version: 6.5.*
+```
+Check `sqlite-browser` project for example use.
 
 # CMake
 CMake templates for use in C++ projects and libraries. Expected structure of C++ project is one containing sources in the `src` directory and tests in `test` directory. Expected structure for C++ library is one containing sources in `src` directory, tests in `test` directory, public headers in `include/<library name>` and use examples in `examples`. Also, present are files supporting use of `GTest` and `Catch2` testing frameworks.
