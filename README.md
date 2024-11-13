@@ -15,7 +15,11 @@ This repository contains reusable files including:
 - `.clang-format` file.
 
 # Workflows
-Repository contains 2 reusable workflows. One is for building and testing on given platform, second for SonarCloud analysis and coverage reporting using SonarCloud and Codecov.
+Repository contains multiple reusable workflows. There are workflows for building and testing, onarCloud analysis and coverage reporting using SonarCloud and Codecov, custom CodeQL analysis and Pylint analysis. For some workflows there are seperate files dedicated each supported programming language. As of Nov 2024 languages are: C++, Go, Python.
+
+> **_NOTE:_**  for some workflows there are multiple versions dedicated different programming language. Examples are for C++.
+
+> **_NOTE:_**  C++ workflow supports project using Qt. Use `use-qt` bool param to enable/disable it, `qt-version` to set specific Qt version to use.
 
 ## Build & test
 To use building and testing reusable workflow, place following file in your repo:
@@ -55,6 +59,12 @@ Make sure that appropriate secrets:
  analysis and coverage reporting.
 
 Are present in secrets section on GitHub. Also copy `sonar-project.properties` to your project and fill project key and project name. Check my other project like data-explorer or penna-model for usage examples.
+
+# Pylint
+TODO
+
+# CodeQL
+TODO
 
 # CMake
 CMake templates for use in C++ projects and libraries. Expected structure of C++ project is one containing sources in the `src` directory and tests in `test` directory. Expected structure for C++ library is one containing sources in `src` directory, tests in `test` directory, public headers in `include/<library name>` and use examples in `examples`. Also, present are files supporting use of `GTest` and `Catch2` testing frameworks.
