@@ -1,7 +1,10 @@
+# Table of contents
 - [Overview](#overview)
 - [Workflows](#workflows)
    * [Build & test](#build-test)
    * [Analysis and coverage](#analysis-and-coverage)
+   * [Pylint](#pylint)
+   * [CodeQL](#codeql)
 - [CMake](#cmake)
 - [.gitignore](#gitignore)
 - [.clang-format](#clang-format)
@@ -60,7 +63,7 @@ Make sure that appropriate secrets:
 
 Are present in secrets section on GitHub. Also copy `sonar-project.properties` to your project and fill project key and project name. Check my other project like `data-explorer` or `penna-model` for usage examples.
 
-# Pylint
+## Pylint
 Static analysis reusable workflow for Python projects using Pylint. To call reusable workflow place following content in your workflow file:
 ```
 name: Pylint
@@ -74,7 +77,7 @@ jobs:
 
 Check `penna-model` project for example use.
 
-# CodeQL
+## CodeQL
 Workflow for CodeQL analysis in case default version does not work correctly. Dedicated for C++ projects using Qt framework.
 
 ```
