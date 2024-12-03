@@ -28,7 +28,7 @@ set(PUBLIC_HEADERS
     include/${PROJECT_NAME}/<TODO: name>
 )
 
-add_library(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES})
+add_library(${PROJECT_NAME} ${${PROJECT_NAME}_SOURCES} ${PUBLIC_HEADERS})
 
 target_include_directories(${PROJECT_NAME}
   PUBLIC
@@ -56,3 +56,6 @@ install(FILES ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.pc
     DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig)
 
 add_subdirectory(examples)
+
+enable_testing()
+add_subdirectory(tests)
