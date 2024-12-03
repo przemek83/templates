@@ -12,18 +12,18 @@ This repository contains reusable files including:
 - `.clang-format` file.
 
 # CMake
-CMake templates for use in C++ projects and libraries. Expected structure of C++ project is one containing sources in the `src` directory and tests in `test` directory. Expected structure for C++ library is one containing sources in `src` directory, tests in `test` directory, public headers in `include/<library name>` and use examples in `examples`. Also, present are files supporting use of `GTest` and `Catch2` testing frameworks.
+CMake templates for use in C++ projects and libraries. Expected structure of C++ project is one containing sources in the `src` directory and tests in `tests` directory. Expected structure for C++ library is one containing sources in `src` directory, tests in `tests` directory, public headers in `include/<library name>` and use examples in `examples`. Also, present are files supporting use of `GTest` and `Catch2` testing frameworks.
 
 For standard C++ projects, use:
 - `CMakeLists.txt` as the main project file,
 - `Tests.cmake.catch2` or `Tests.cmake.gtest` for initializing the appropriate testing framework,
-- `test/CMakeLists.txt.catch2` or `test/CMakeLists.txt.gtest` for testing subproject.
+- `tests/CMakeLists.txt.catch2` or `tests/CMakeLists.txt.gtest` for testing subproject.
 
 For C++ library projects, use:
 - `CMakeLists.txt.library` as the main project file,
 - `library_name.pc.in` for additional configuration needed by projects using library,
 - `Tests.cmake.catch2` or `Tests.cmake.gtest` for initializing the appropriate testing framework,
-- `test/CMakeLists.txt.catch2` or `test/CMakeLists.txt.gtest` for testing subproject.
+- `tests/CMakeLists.txt.catch2` or `tests/CMakeLists.txt.gtest` for testing subproject.
 
 Check out my other projects like `data-explorer`, `penna-model` or `cpputils` for usage examples.
 
