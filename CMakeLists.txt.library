@@ -55,7 +55,10 @@ install(TARGETS ${PROJECT_NAME}
 install(FILES ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.pc
     DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig)
 
-add_subdirectory(examples)
 
-enable_testing()
-add_subdirectory(tests)
+# Can be replaced with PROJECT_IS_TOP_LEVEL when CMake 3.21+ used.
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+    add_subdirectory(examples)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
