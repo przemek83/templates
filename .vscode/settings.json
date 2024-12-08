@@ -1,0 +1,7 @@
+{
+    "editor.formatOnSave": true,
+    "sonarlint.pathToCompileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "cmake.configureArgs": [
+        "-DCMAKE_CXX_FLAGS=-Wall -Wextra -Wfloat-equal -Wundef -Wshadow -Wpointer-arith -Wcast-align -Wstrict-overflow=5 -Wwrite-strings -Wcast-qual -Wconversion -Wunreachable-code -Wformat=2 -pedantic"],
+    "editor.inlayHints.enabled": "offUnlessPressed",
+}
