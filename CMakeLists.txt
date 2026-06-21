@@ -10,6 +10,9 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# For Qt code (emit is C++ function in C++20)
+# ADD_DEFINITIONS(-DQT_NO_EMIT)
+
 option(CODE_COVERAGE "Collect coverage" OFF)
 
 if(CODE_COVERAGE)
